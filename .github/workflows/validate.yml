@@ -26,5 +26,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Lint (without worker)
+        run: node lint-no-worker.mjs
+
       - name: Lint
         run: node lint.mjs
